@@ -8,6 +8,6 @@ difference() {
     cube([3.5, notchLength, thickness]);
 }
 
-translate([58.33,0,.3])
-rotate([0,17,0])
-cube([120, width, thickness]);
+translate([58.7,0,.16])
+rotate([0,13,0])
+cube([130, width, thickness]);
