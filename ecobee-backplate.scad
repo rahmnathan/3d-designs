@@ -2,16 +2,19 @@ screwHoleY = 71;
 screwHoleX = 50;
 
 // Main square with holes.
-difference() {
-    cube([165, 165, 2]);
-    translate([2, 2, 0])
-    cube([162, 162, 1]);
-    translate([screwHoleX, screwHoleY, 0])
-    cube([4, 8, 4]); 
-    translate([screwHoleX + 50, screwHoleY, 0])
-    cube([4, 8, 4]);
-    translate([screwHoleX + 27, screwHoleY - 5, 0])
-    cube([18, 17, 4]); 
+minkowski() {
+    difference() {
+        cube([165, 165, 2]);
+        translate([2, 2, 0])
+        cube([162, 162, 1]);
+        translate([screwHoleX, screwHoleY, 0])
+        cube([4, 8, 4]); 
+        translate([screwHoleX + 50, screwHoleY, 0])
+        cube([4, 8, 4]);
+        translate([screwHoleX + 27, screwHoleY - 5, 0])
+        cube([18, 17, 4]); 
+    }
+    cylinder(r=2,h=1);
 }
 
 // Wiring hole
