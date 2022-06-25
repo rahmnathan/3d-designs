@@ -1,21 +1,8 @@
-height=12;
-inner=100;
-outter=130;
+height=20;
+inner=51.5;
+outter=67;
 
 difference(){
-    cylinder(h=height, d=outter);
-    cylinder(h=height, d=inner);
+    cylinder(h=height, r1=outter + 2, r2=outter);
+    cylinder(h=height, r1=inner + 5, r2=inner);
 }
-
-
-/*
-difference(){
-    translate([40.3, 0, 0])
-    cylinder(h=height, d=poleOuter);
-    translate([40.3, 0, 2])
-    cylinder(h=height, d=poleInner);
-}
-
-translate([4.1, -4, 0])
-cube([32, 8, height]);
-*/
