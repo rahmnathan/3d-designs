@@ -6,24 +6,24 @@ difference() {
     }
 
     // Shovel handle cutout
-    translate([0, 0, 3])
-    rotate([0, 0, -8])
-    cube([13, 1, 16]);
+    translate([0, .3, 3])
+    rotate([0, 0, -10])
+    cube([12, 1, 16]);
 
-    translate([-12, -1.75, 3])
-    rotate([0, 0, 8])
-    cube([13, 1, 16]);
+    translate([-11.5, -1.7, 3])
+    rotate([0, 0, 10])
+    cube([12, 1, 16]);
 
-    translate([12.5, -1.8, 3])
+    translate([11.5, -1.6, 3])
     rotate([0, 0, -28])
     cube([10, 1, 16]);
 
-    translate([-20, -6.2, 3])
+    translate([-19, -6, 3])
     rotate([0, 0, 28])
     cube([10, 1, 16]);
     
     // Tent stake cutout
     translate([0, -3, 3])
-    cylinder(h=16,r=5);
+    cylinder(h=16,r=4.75);
 }
 
