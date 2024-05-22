@@ -1,30 +1,29 @@
 difference() {
     minkowski() {
-        translate([-22, -8, 0])
-        cube([45, 10, 16]);
-        sphere(1);
+        translate([-22, -9, 0])
+        cube([45, 12, 16]);
+        sphere(3);
     }
 
-    // Middle Top
-    translate([0, 0, 2])
-    rotate([0, 0, -10])
+    // Shovel handle cutout
+    translate([0, 0, 3])
+    rotate([0, 0, -8])
     cube([13, 1, 16]);
 
-    translate([-12, -2.25, 2])
-    rotate([0, 0, 10])
+    translate([-12, -1.75, 3])
+    rotate([0, 0, 8])
     cube([13, 1, 16]);
 
-    // Outter top
-    translate([12.5, -2.1, 2])
-    rotate([0, 0, -30])
+    translate([12.5, -1.8, 3])
+    rotate([0, 0, -28])
     cube([10, 1, 16]);
 
-    translate([-20, -7, 2])
-    rotate([0, 0, 30])
+    translate([-20, -6.2, 3])
+    rotate([0, 0, 28])
     cube([10, 1, 16]);
     
-    translate([15, -3, 8])
-    rotate([0, 90, 0])
-    cylinder(h=10,r=3);
+    // Tent stake cutout
+    translate([0, -3, 3])
+    cylinder(h=16,r=5);
 }
 
