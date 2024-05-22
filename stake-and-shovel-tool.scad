@@ -1,49 +1,30 @@
-import("DS_Handle_flat_for_flex_filaments.stl", convexity=3);
-
-
-//minkowski()
-//{
-    
-    difference(){
-        translate([-15, -45, 0])
-        cube([40, 14, 16]);
-        translate([-12, -43, 0])
-        cube([36, 9, 20]);
+difference() {
+    minkowski() {
+        translate([-22, -8, 0])
+        cube([45, 10, 16]);
+        sphere(1);
     }
-//    sphere(1);
-//}
 
-/*difference() {
-    cube([59, 14, 28]);
-    translate([15, 4, 4])
-    cube([30, 1, 28]);
+    // Middle Top
+    translate([0, 0, 2])
+    rotate([0, 0, -10])
+    cube([13, 1, 16]);
+
+    translate([-12, -2.25, 2])
+    rotate([0, 0, 10])
+    cube([13, 1, 16]);
+
+    // Outter top
+    translate([12.5, -2.1, 2])
+    rotate([0, 0, -30])
+    cube([10, 1, 16]);
+
+    translate([-20, -7, 2])
+    rotate([0, 0, 30])
+    cube([10, 1, 16]);
+    
+    translate([15, -3, 8])
+    rotate([0, 90, 0])
+    cylinder(h=10,r=3);
 }
 
-nubLength=7;
-
-// First Nub
-
-firstNubXPos=11.5;
-firstNubYPos=14;
-
-difference(){
-    rotate([90, 0, 0])
-    translate([firstNubXPos, firstNubYPos, 0])
-    cylinder(h=nubLength, d=7);
-    
-    rotate([90, 0, 0])
-    translate([firstNubXPos, firstNubYPos, 4])
-    scale([.5, 2])
-    cylinder(h=nubLength, d=5);
-}
-
-difference(){
-    rotate([90, 0, 0])
-    translate([firstNubXPos, firstNubYPos, nubLength])
-    cylinder(h=nubLength, d1=9, d2=1);
-    
-    rotate([90, 0, 0])
-    translate([firstNubXPos, firstNubYPos, 4])
-    scale([.4, 3])
-    cylinder(h=nubLength, d=5);
-}*/
